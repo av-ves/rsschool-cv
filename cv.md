@@ -47,3 +47,62 @@
 - Agile / Scrum, Kanban — ⟨участие в спринтах, дейли, ретро⟩
 - Управление проектами: планирование, оценка сроков, риск-менеджмент (опыт из промышленных проектов)
 - ⟨Jira, Confluence, MS Project⟩
+
+---
+
+## Примеры кода
+
+```
+import { Field, FieldLabel, FieldContent, FieldTitle, FieldDescription } from "@/components/ui/field";
+import { RadioGroupItem } from "@/components/ui/radio-group";
+
+export function FormSelectCard({ value, title, description, subDescription }) {
+  const id = `choice-card-${value}`;
+
+  return (
+    <FieldLabel htmlFor={id} className="cursor-pointer font-normal">
+      <Field
+        orientation="horizontal"
+        className="flex items-center justify-between gap-4 rounded-lg border p-4 transition-all hover:bg-slate-50 [&:has([data-state=checked])]:border-blue-600 [&:has([data-state=checked])]:bg-blue-50/50"
+      >
+        <FieldContent>
+          <FieldTitle className="font-medium">{title}</FieldTitle>
+          {description && (
+            <FieldDescription>{description}</FieldDescription>
+          )}
+          {subDescription && ( <p className="mt-1 text-xs text-slate-400"> {subDescription} </p> )}
+
+        </FieldContent>
+        <RadioGroupItem value={value} id={id} className="shrink-0" />
+      </Field>
+    </FieldLabel>
+  );
+}
+```
+
+---
+
+## Опыт работы
+
+### ⟨Название компании⟩ — ⟨должность⟩
+
+No info...
+
+---
+
+## Образование
+
+**МГИМО МИД РФ**
+
+---
+
+## Английский язык
+
+**Уровень:** ⟨C1 / Advanced⟩
+
+- Более 12 лет рабочей практики в международных промышленных проектах: ⟨переписка, совещания с иностранными подрядчиками, техническая документация, командировки⟩
+- Свободно читаю техническую документацию и англоязычные источники по разработке
+
+---
+
+_⟨Дата обновления: сентябрь 2026⟩_
